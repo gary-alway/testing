@@ -5,6 +5,8 @@ supporting code for the testing [knowledge share](https://docs.google.com/presen
 ## notes
 
 - React
+- snapshot testing
+- custom jest matchers
 - hooks
 - test pyramid
 - honeycomb testing
@@ -16,5 +18,5 @@ supporting code for the testing [knowledge share](https://docs.google.com/presen
 - nginx
 - deprecated code
 - refactoring code
-- code coverage
+- [code coverage](file:///Users/garyalway/dev/gda/testing/coverage/index.html)
 - husky
