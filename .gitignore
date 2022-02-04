@@ -1,0 +1,7 @@
+node_modules
+dist
+.DS_Store
+.secret
+yarn-error.log
+.npmrc
+coverage

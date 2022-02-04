@@ -1,0 +1,44 @@
+{
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "test": "jest --maxWorkers=4 src --coverage",
+    "lint": "yarn eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --write 'src/**/*.{js,ts,tsx,json,css,md}'",
+    "typecheck": "tsc --noEmit"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn format && yarn test"
+    }
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "ramda": "^0.27.1",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.11",
+    "@types/jest": "^26.0.14",
+    "@types/ramda": "^0.27.32",
+    "@types/react": "^16.9.51",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
+    "eslint": "^7.10.0",
+    "eslint-plugin-deprecation": "^1.1.0",
+    "eslint-plugin-functional": "^3.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "prettier": "^2.1.2",
+    "ts-jest": "^26.4.1",
+    "ts-loader": "^8.0.4",
+    "typescript": "4.2.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
