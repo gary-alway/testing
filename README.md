@@ -18,5 +18,5 @@ supporting code for the testing [knowledge share](https://docs.google.com/presen
 - nginx
 - deprecated code
 - refactoring code
-- [code coverage](file:///Users/garyalway/dev/gda/testing/coverage/index.html)
+- code coverage `open coverage/index.html`
 - husky
