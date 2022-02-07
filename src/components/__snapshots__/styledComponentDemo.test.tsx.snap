@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`styled components matches the snapshot 1`] = `
+<div>
+  <div
+    class="css-2rg88g"
+  >
+    this is styled! (and it can be custom styled because of the className prop)
+  </div>
+</div>
+`;
