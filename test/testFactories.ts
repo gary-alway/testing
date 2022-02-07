@@ -5,3 +5,9 @@ export const testBeer = (overrides: Partial<Beer> = {}): Beer => ({
   image_url: 'http://url/beer1',
   ...overrides,
 })
+
+export const testUser = (overrides: Partial<User> = {}): User => ({
+  user_id: Math.trunc(Math.random() * 20) + 1,
+  name: 'testing',
+  ...overrides,
+})

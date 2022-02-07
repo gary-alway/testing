@@ -1,5 +1,6 @@
 import { connect, endConnection } from '../src/database'
 import { userService } from '../src/services/userService'
+import { testUser } from './testFactories'
 
 const service = userService()
 
@@ -13,11 +14,11 @@ describe('acceptance', () => {
   })
 
   it('users acceptance test', async () => {
-    const name = `test user: ${Date.now()}`
-    await service.saveUser(name)
+    const user = testUser({ name: `test user: ${Date.now()}` })
+    await service.saveUser(user.name)
 
     const users = await service.getUsers()
 
-    expect(users.find((user) => user.name === name)).toMatchUser({ name })
+    expect(users.find((u) => u.name === user.name)).toMatchUser(user)
   })
 })
