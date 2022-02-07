@@ -1,3 +1,3 @@
-# testing
+# testing sandbox
 
-supporting code for the testing [knowledge share](https://docs.google.com/presentation/d/1rEHi_PJmmtLP-QubXntJWWXaoHueYB2g90J3tUCsh2k/edit#slide=id.gfb6914f3aa_0_348)
+a project to experiment with and to demonstrate different testing styles / approaches / solutions / tips and tricks
