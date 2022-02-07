@@ -11,3 +11,13 @@ declare type User = {
   user_id: number
   name: string
 }
+
+declare namespace jest {
+  interface Matchers<R> {
+    toMatchUser(value: any): R
+  }
+
+  interface Expect {
+    toMatchUser<T>(actual: T): Matchers<T>
+  }
+}

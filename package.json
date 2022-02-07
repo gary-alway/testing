@@ -8,7 +8,8 @@
     "db:down": "make -C ./infra down",
     "db:reset": "make -C ./infra reset",
     "db:seed": "ts-node --files --project tsconfig.json ./test/seed",
-    "test": "jest --maxWorkers=4 src --coverage",
+    "test": "jest --maxWorkers=4 src --coverage --testPathIgnorePatterns=/test/",
+    "test:acceptance": "jest ./test --runInBand  --testPathIgnorePatterns=/src/",
     "lint": "yarn eslint . --ext .js,.jsx,.ts,.tsx",
     "format": "prettier --write 'src/**/*.{js,ts,tsx,json,css,md}'",
     "typecheck": "tsc --noEmit"

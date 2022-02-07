@@ -4,9 +4,6 @@ supporting code for the testing [knowledge share](https://docs.google.com/presen
 
 ## todo
 
-- acceptance testing and docker
-- databases
 - hooks
 - contexts
-- custom jest matchers
 - mocking vs spying (jest.requireActual)

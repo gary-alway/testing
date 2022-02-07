@@ -24,9 +24,9 @@ export const endConnection = () =>
     })
   })
 
-export const executeQuery = <T>(sql: string, params = []): Promise<T[]> =>
+export const executeQuery = <T>(sql: string): Promise<T[]> =>
   new Promise((resolve, reject) => {
-    client.query(sql, params, (error, results) => {
+    client.query(sql, (error, results) => {
       if (error) reject(error)
       if (Array.isArray(results)) {
         resolve((results as T[]).map((values: any) => ({ ...values })))
