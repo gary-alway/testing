@@ -4,6 +4,5 @@ supporting code for the testing [knowledge share](https://docs.google.com/presen
 
 ## todo
 
-- hooks
 - contexts
 - mocking vs spying (jest.requireActual)
