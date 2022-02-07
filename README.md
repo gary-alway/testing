@@ -8,6 +8,5 @@ supporting code for the testing [knowledge share](https://docs.google.com/presen
 - databases
 - hooks
 - contexts
-- deprecated code
 - custom jest matchers
 - mocking vs spying (jest.requireActual)
