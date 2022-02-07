@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@emotion/jest": "^11.7.1",
+    "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
     "@testing-library/react-hooks": "^7.0.2",
     "@types/classnames": "^2.2.11",

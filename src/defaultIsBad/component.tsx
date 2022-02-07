@@ -1,5 +1,5 @@
 import React from 'react'
 
-const MyComponnt: React.FC = () => <>default is bad</>
+const MyComponnt: React.FC = () => <>some component</>
 
 export default MyComponnt
