@@ -1,0 +1,35 @@
+version: '3.7'
+services:
+  wait-db:
+    image: waisbrot/wait
+    networks:
+      - test-network
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - TARGETS=db:3306
+      - TIMEOUT=10
+
+  db:
+    container_name: test_db
+    image: mysql:5.7
+    networks:
+      - test-network
+    volumes:
+      - /var/lib/mysql
+    environment:
+      - 'MYSQL_DATABASE=testing'
+      - 'MYSQL_USER=testing'
+      - 'MYSQL_PASSWORD=secret'
+      - 'MYSQL_ROOT_PASSWORD=secret'
+    ports:
+      - '33061:3306'
+    healthcheck:
+      test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost']
+      timeout: 20s
+      retries: 10
+
+networks:
+  test-network:
+    name: test-network

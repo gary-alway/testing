@@ -6,3 +6,8 @@ declare type Beer = {
   image_url: string
   tagline: string
 }
+
+declare type User = {
+  user_id: number
+  name: string
+}
