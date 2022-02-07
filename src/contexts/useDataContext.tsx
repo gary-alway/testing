@@ -2,11 +2,11 @@ import React, { createContext, useContext } from 'react'
 import { useData } from '../hooks/useData'
 
 export type DataContextType = {
-  data: number | undefined
+  users: User[]
 }
 
 export const DataContext = createContext<DataContextType>({
-  data: undefined,
+  users: [],
 })
 
 type DataProviderProps = {
@@ -14,12 +14,12 @@ type DataProviderProps = {
 }
 
 export const DataContextProvider = ({ children }: DataProviderProps): JSX.Element => {
-  const { data } = useData()
+  const { users } = useData()
 
   return (
     <DataContext.Provider
       value={{
-        data,
+        users,
       }}
     >
       {children}

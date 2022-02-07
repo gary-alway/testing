@@ -1,14 +1,19 @@
 import { render } from '@testing-library/react'
 import React from 'react'
+import { testUser } from '../../test/testFactories'
 import * as useDataModule from '../hooks/useData'
 import { DataContext, DataContextProvider, DataContextType } from './useDataContext'
 
 const useDataMock = jest.spyOn(useDataModule, 'useData')
 
-const data = 1234
+const user1 = testUser({ name: 'user 1' })
+const user2 = testUser({ name: 'user 2' })
+const user3 = testUser({ name: 'user 3' })
+
+const users = [user1, user2, user3]
 
 useDataMock.mockReturnValue({
-  data,
+  users,
 })
 
 // eslint-disable-next-line functional/no-let
@@ -32,6 +37,6 @@ describe('data context', () => {
       },
     )
 
-    expect(valueProp.data).toEqual(data)
+    expect(valueProp.users).toEqual(users)
   })
 })

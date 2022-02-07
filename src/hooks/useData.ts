@@ -1,17 +1,19 @@
 import { useEffect, useState } from 'react'
+import { userService } from '../services/userService'
 
 type UseData = {
-  data: number | undefined
+  users: User[]
 }
 
 export const useData = (): UseData => {
-  const [data, setData] = useState<number | undefined>(undefined)
+  const service = userService()
+  const [data, setData] = useState<User[]>([])
 
   useEffect(() => {
-    setData(Math.trunc(Math.random() * 20) + 1)
+    service.getUsers().then(setData)
   }, [])
 
   return {
-    data,
+    users: data,
   }
 }
