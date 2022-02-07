@@ -12,7 +12,7 @@ describe('unit testing', () => {
   })
 
   describe('pluralizeWithValue', () => {
-    test.each([[0], [2], [5]])('pluralizes a string when count = %s', (count) => {
+    test.each<number>([0, 2, 5])('pluralizes a string when count = %s', (count) => {
       expect(pluralizeWithValue(count, 'person', 'people')).toBe(`${count} people`)
     })
 
