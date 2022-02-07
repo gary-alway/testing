@@ -11,6 +11,7 @@ module.exports = {
   collectCoverage: false,
   coverageReporters: ['json', 'html', 'text'],
   coverageDirectory: 'coverage',
+  collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', '!<rootDir>/node_modules/'],
   testRegex: '(/__tests__/.*|\\.(test|spec))\\.(tsx?)$',
   coveragePathIgnorePatterns: ['<rootDir>/test/', '<rootDir>/node_modules'],
   moduleNameMapper: {
@@ -19,5 +20,6 @@ module.exports = {
     '\\.(css)$': '<rootDir>/node_modules/jest-css-modules',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  testURL: 'http://localhost/', // https://github.com/facebook/jest/issues/6769
+  testURL: 'http://localhost/', // https://github.com/facebook/jest/issues/6769,
+  testEnvironment: 'jest-environment-jsdom',
 }

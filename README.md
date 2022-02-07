@@ -12,7 +12,6 @@ supporting code for the testing [knowledge share](https://docs.google.com/presen
 - honeycomb testing
 - mocking / spying
 - databases
-- APIs and nock
 - acceptance testing and docker
 - AWS and localstack
 - nginx

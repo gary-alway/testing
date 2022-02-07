@@ -21,7 +21,7 @@
     "typeRoots": ["./types/", "./node_modules/@types"],
     "jsx": "react"
   },
-  "include": ["./src/**/*.ts", "./src/**/*.tsx", "globals.d.ts"],
+  "include": ["./src/**/*.ts", "./src/**/*.tsx", "./test/**/*.ts", "globals.d.ts"],
   "awesomeTypescriptLoaderOptions": {
     "useBabel": false,
     "useCache": true

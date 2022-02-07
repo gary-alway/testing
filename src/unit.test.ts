@@ -1,7 +1,7 @@
-import { myFunc } from './unit'
+import { addNumbers } from './unit'
 
-describe('unit', () => {
-  it('myFunc adds two numbers', () => {
-    expect(myFunc(2, 2)).toEqual(4)
+describe('unit testing', () => {
+  it('add two numbers', () => {
+    expect(addNumbers(2, 2)).toEqual(4)
   })
 })
