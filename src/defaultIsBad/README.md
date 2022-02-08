@@ -22,7 +22,3 @@ import * as myComp from "./component";
 
 jest.spyOn(myComp, 'MyComponnt')
 ```
-
-## husky
-
-runs tests on commit
